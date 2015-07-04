@@ -27,6 +27,8 @@ gem 'bootstrap-sass'
 
 gem 'pry-rails'
 
+gem 'faker'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
