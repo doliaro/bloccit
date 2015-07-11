@@ -4,10 +4,7 @@ class PostsController < ApplicationController
   end
 
   def show
-<<<<<<< HEAD
-=======
   	@post = Post.find(params[:id])
->>>>>>> crud
   end
 
   def new
