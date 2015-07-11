@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
 	resources :posts
 
-	resources :advertisements
+	resources :advertisements, only: [:show, :index]
 
   	get 'about' => 'welcome#about'
 
