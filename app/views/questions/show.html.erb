@@ -1,0 +1,8 @@
+
+<h1><%= @question.title %> <small><%= @question.resolved_or_pending %></small></h1>
+    <%= link_to "Edit", edit_question_path(@question), class: 'btn btn-success' %>
+
+    <%= link_to question_resolve_path(@question), method: :put do %>
+    	<i class='<%= @question.resolved ? "glyphicon glyphicon-remove-sign" : "glyphicon glyphicon-ok-sign" %>'></i>
+    <% end %>
+<p><%= @question.body %></p>
