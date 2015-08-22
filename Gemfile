@@ -32,6 +32,8 @@ gem 'faker'
 gem 'devise'
 
 gem 'figaro', '1.0'
+
+gem 'pundit'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
