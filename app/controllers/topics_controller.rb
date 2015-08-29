@@ -1,9 +1,5 @@
  class TopicsController < ApplicationController
-   private
-
-   def topic_params
-      params.require(:topic).permit(:name, :description, :public)
-   end
+   
 
    def index
      @topics = Topic.all
@@ -46,5 +42,10 @@
        flash[:error] = "Error saving topic. Please try again."
        render :edit
      end
+   end
+   private
+
+   def topic_params
+      params.require(:topic).permit(:name, :description, :public)
    end
 end
