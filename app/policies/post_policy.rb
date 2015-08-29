@@ -8,8 +8,9 @@
         else
             scope.none
         end
+    end
+end
 
-        end
     def index?
         true
     end
