@@ -12,6 +12,16 @@
  end
  users = User.all
 
+  # Create Summaries
+ 10.times do
+   Summary.create!(
+     post: post.sample,
+     name:         Faker::Lorem.sentence,
+     description:  Faker::Lorem.paragraph
+   )
+ end
+summary = Summary.all
+
  # Create Topics
 15.times do
    Topic.create!(
