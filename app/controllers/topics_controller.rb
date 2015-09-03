@@ -1,5 +1,5 @@
  class TopicsController < ApplicationController
-   
+   before_action :set_topic, only: [:show, :edit, :update]
 
    def index
      @topics = Topic.all
@@ -12,13 +12,11 @@
    end
 
    def show
-     @topic = Topic.find(params[:id])
      @posts = @topic.posts
      authorize @topic
    end
 
    def edit
-     @topic = Topic.find(params[:id])
      authorize @topic
    end
 
@@ -34,7 +32,6 @@
    end
 
    def update
-     @topic = Topic.find(params[:id])
      authorize @topic
      if @topic.update_attributes(topic_params)
        redirect_to @topic
@@ -44,6 +41,10 @@
      end
    end
    private
+
+   def set_topic
+    @topic = Topic.find(params[:id])
+   end
 
    def topic_params
       params.require(:topic).permit(:name, :description, :public)
