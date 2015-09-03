@@ -44,8 +44,10 @@ ActiveRecord::Schema.define(version: 20150903230721) do
     t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.integer  "topic_id"
+    t.integer  "summary_id"
   end
 
+  add_index "posts", ["summary_id"], name: "index_posts_on_summary_id"
   add_index "posts", ["topic_id"], name: "index_posts_on_topic_id"
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 

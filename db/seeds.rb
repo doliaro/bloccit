@@ -12,8 +12,6 @@
  end
  users = User.all
 
- 
-
  # Create Topics
 15.times do
    Topic.create!(
