@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hszvlfxg3
+  api_key: '537445535925581'
+  api_secret: BLfvj-if2cvVRO7N7n0x1Ecnhis
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hszvlfxg3
+  api_key: '537445535925581'
+  api_secret: BLfvj-if2cvVRO7N7n0x1Ecnhis
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hszvlfxg3
+  api_key: '537445535925581'
+  api_secret: BLfvj-if2cvVRO7N7n0x1Ecnhis
+  enhance_image_tag: true
+  static_image_support: false
