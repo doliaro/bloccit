@@ -45,6 +45,7 @@ gem 'mini_magick'
 
 gem 'fog'
 
+gem 'will_paginate', '~> 3.0.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

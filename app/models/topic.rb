@@ -4,4 +4,6 @@ class Topic < ActiveRecord::Base
     scope :ordered_by_title, ->{ order('created_at ASC') }
 
     validates :name, length: { minimum: 5}
+
+    self.per_page = 10
 end
