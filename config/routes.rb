@@ -6,10 +6,11 @@ Rails.application.routes.draw do
     resources :users, only: [:show, :index]
 
     resources :topics do
-      resources :posts, except: [:index] do
-        resources :comments, only: [:create]
-        resources :summaries, except: [:index]
-      end
+      resources :posts, except: [:index]
+    end
+
+    resources :posts, only: [] do
+      resources :comments, only: [:create, :destroy]
     end
 
     resources :advertisements, only: [:show, :index]

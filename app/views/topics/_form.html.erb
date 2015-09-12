@@ -1,9 +1,9 @@
  <%= form_for @topic do |f| %>
-   <% if post.errors.any? %>
+   <% if topic.errors.any? %>
      <div class="alert alert-danger">
-       <h4>There are <%= pluralize(post.errors.count, "error") %>.</h4>
+       <h4>There are <%= pluralize(topic.errors.count, "error") %>.</h4>
        <ul>
-         <% post.errors.full_messages.each do |msg| %>
+         <% topic.errors.full_messages.each do |msg| %>
            <li><%= msg %></li>
          <% end %>
        </ul>
@@ -11,7 +11,7 @@
    <% end %>
    <%= form_group_tag(topic.errors[:name]) do %>
      <%= f.label :name %>
-     <%= f.text_field :title, class: 'form-control', placeholder: "Enter topic name" %>
+     <%= f.text_field :name, class: 'form-control', placeholder: "Enter topic name" %>
    <% end %>
    <%= form_group_tag(topic.errors[:description]) do %>
      <%= f.label :description %>
@@ -23,5 +23,6 @@
    <% end %>
    <div class="form-group">
      <%= f.submit "Save", class: 'btn btn-success' %>
+     <% end %>
    </div>
- <% end %>
+<% end %>

@@ -1,5 +1,5 @@
 class Topic < ActiveRecord::Base
-    has_many :posts
+    has_many :posts, dependent: :destroy
 
     scope :ordered_by_title, ->{ order('created_at ASC') }
 

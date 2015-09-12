@@ -3,6 +3,9 @@
   <% if comment.user %>
     <small>
       <em><%= comment.user.name || comment.user.email %></em>
+      <% if policy(comment).destroy? %>
+        | <%= link_to "Delete", [@topic, @post, comment], method: :delete %>
+      <% end %>
     </small>
   <% end %>
 </p>
