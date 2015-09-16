@@ -2,7 +2,11 @@ require 'rails_helper'
 
 describe Vote do
     before do
-       @post = Post.create!(title: 'post title', body: 'post body needs to be longer')
+      topic =Topic.create(name: "validation met")
+      user = User.new(email: "admin@example.com", password: "password")
+      user.skip_confirmation!
+      user.save!
+       @post = Post.create!(user: user, topic: topic, title: 'post title', body: 'post body needs to be longer')
     end
 
   describe "validations" do
